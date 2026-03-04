@@ -13,6 +13,8 @@ This project demonstrates:
 - React-based popup UI
 - Type-safe state management
 
+![Extension UI](./screenshot.png)
+
 ## Features
 
 - Track time spent per page
