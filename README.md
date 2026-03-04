@@ -1,16 +1,45 @@
-# React + Vite
+# Personal Web Memory – Chrome Extension
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A privacy-first Chrome extension that remembers:
+- Pages you spend time on
+- Text you intentionally highlight
+- What mattered to you
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⏱ Passive time tracking
+- 🧠 Highlight capture (right-click → Save to Memory)
+- 🔍 Search across titles, URLs, and highlights
+- 🎯 Click highlight → Scroll to exact text
+- 🔒 Local-only storage (nothing leaves the browser)
+- 🟢 Tracking toggle with user control
 
-## React Compiler
+## Why I Built This
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+I often read something valuable but couldn’t find it later.
+Bookmarks weren’t enough.
+History wasn’t meaningful.
 
-## Expanding the ESLint configuration
+This extension captures *attention + intention*.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React (Popup UI)
+- TypeScript
+- Chrome Extensions (Manifest V3)
+- chrome.storage.local
+
+## How to Run
+
+1. Clone the repo
+2. Run `npm install`
+3. Run `npm run build`
+4. Go to `chrome://extensions`
+5. Enable Developer Mode
+6. Load unpacked → select `dist`
+
+## Roadmap
+
+- Smarter highlight anchoring
+- Keyboard shortcuts
+- Optional local embeddings for semantic recall
